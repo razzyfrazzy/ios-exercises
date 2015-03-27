@@ -12,17 +12,29 @@
 
 - (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
     /* WORK HERE */
-    return (string1 == string2);
+    NSString *cerealString;
+    NSString *identicalCerealString;
+    BOOL cerealEquality = [cerealString isEqualToString:identicalCerealString];
+
+    return cerealEquality;
 }
 
 - (BOOL) number:(NSNumber *)number1 isTheSameAsNumber:(NSNumber *)number2 {
     /* WORK HERE */
-    return (number1 == number2);
+    NSNumber *sixNumber;
+    NSNumber *identicalSixNumber;
+    BOOL numberEquality = [sixNumber isEqualToNumber:identicalSixNumber];
+    
+    return numberEquality;
 }
 
 - (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2 {
     /* WORK HERE */
-    return NO;
+    NSInteger high;
+    NSInteger low;
+    BOOL highIsGreater = (high>=low);
+    
+    return highIsGreater;
 }
 
 @end
