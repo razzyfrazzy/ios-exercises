@@ -11,12 +11,13 @@
 @implementation MarysAppleHandler
 
 - (NSString *) itemMaryCanPurchaseForDollars:(NSInteger)dollars {
-    NSString *itemToReturn;
+    NSString *purchasableItem;
 
     /* WORK HERE */
     
-    NSLog(@"For $%ld, Mary can: %@", (long)dollars, itemToReturn);
-    return itemToReturn;
+    
+    NSLog(@"For $%ld, Mary can: %@", (long)dollars, purchasableItem);
+    return purchasableItem;
 }
 
 - (NSUInteger) dollarCostForAppleFlavoredVodka {
