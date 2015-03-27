@@ -15,12 +15,15 @@
     NSString *favoriteCheese = [NSString stringWithFormat: @"My favorite cheese is %@.",cheeseName];
     return favoriteCheese;
 }
-
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
-    /* WORK HERE */
-    NSRange fullCheeseStringRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
-    NSString *cheeseNameOnly = [cheeseName stringByReplacingCharactersInRange:fullCheeseStringRange withString:@""];
-    return cheeseNameOnly;
+    NSString *returnString = cheeseName;
+    
+    if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
+        NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch | NSBackwardsSearch];
+        returnString = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+    }
+    
+    return returnString;
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount
